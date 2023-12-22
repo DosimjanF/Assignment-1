@@ -4,10 +4,6 @@ public class Point {
     private double x;
     private double y;
 
-
-
-
-
     public void setX(double x) {
         this.x = x;
     }
