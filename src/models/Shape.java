@@ -18,9 +18,11 @@ public class Shape {
     }
 
     public void addLengths() {
-        for (int i = 0; i < points.size() - 1; i++) {
+        int len = points.size();
+        for (int i = 0; i < len - 1; i++) {
             distances.add(points.get(i).distance(points.get(i+1).getX(), points.get(i+1).getY()));
         }
+        distances.add(points.get(len - 1).distance(points.getFirst().getX(), points.getFirst().getY()));
     }
 
 
@@ -42,6 +44,14 @@ public class Shape {
             if (distances.get(i) > maxSide) maxSide = distances.get(i);
         }
         return maxSide;
+    }
+
+    public ArrayList<Point> getPoints() {
+        return points;
+    }
+
+    public ArrayList<Double> getDistances() {
+        return distances;
     }
 
     // container of Points (e.g. ArrayList<Point>)

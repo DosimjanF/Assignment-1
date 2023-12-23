@@ -22,6 +22,9 @@ public class MyApplication {
 
         shape.addLengths();
 
+        System.out.println(shape.getPoints());
+        System.out.println(shape.getDistances());
+
         System.out.println(shape.calculatePerimeter());
         System.out.println(shape.getLongestSide());
     }

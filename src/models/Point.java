@@ -7,7 +7,9 @@ public class Point {
     private double y;
 
     public double distance(double x, double y) {
-        return Math.sqrt(Math.pow((x - getX()), 2)) +  Math.pow((y - getY()), 2);
+        double testx = Math.pow(x - this.x, 2);
+        double testy = Math.pow(y - this.y, 2);
+        return Math.sqrt(testx + testy);
     }
 
     public double getX() {
