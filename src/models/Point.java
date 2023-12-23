@@ -19,12 +19,18 @@ public class Point {
         return y;
     }
 
-    public Point(double x, double y) {  // This constructor lets you create a point with given coordinates
+    public void setX(double x) {  // This method is a setter for x-coordinate value
         this.x = x;
+    }
+
+    public void setY(double y) {  // This method is a setter for y-coordinate value
         this.y = y;
     }
 
-
+    public Point(double x, double y) {  // This constructor lets you create a point with given coordinates
+        setX(x);
+        setY(y);
+    }
 
     @Override
     public String toString() {
