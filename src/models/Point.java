@@ -11,9 +11,9 @@ public class Point {
         setY(y);
     }
 
-    public double distance(double x, double y) {  // Returns the distances from the provided points to the initial points
-        double xlen = Math.pow(x - this.x, 2);
-        double ylen = Math.pow(y - this.y, 2);
+    public double distance(Point point) {  // Returns the distances from the provided points to the initial points
+        double xlen = Math.pow(point.getX() - this.x, 2);
+        double ylen = Math.pow(point.getY() - this.y, 2);
         return Math.sqrt(xlen + ylen);
     }
 
