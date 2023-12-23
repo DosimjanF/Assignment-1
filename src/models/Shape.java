@@ -39,9 +39,4 @@ public class Shape {
         }
         return maxSide;
     }
-
-    public ArrayList<Point> getPoints() {
-        return points;
-    }
-
 }
