@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class MyApplication {
     public static void main(String[] args) throws FileNotFoundException {
-        File file = new File("C:\\Users\\Dos\\Assignment-1\\src\\source.txt");
+        File file = new File("C:\\Users\\Dos\\Assignment-1\\src\\mysource.txt");
 
         Scanner sc = new Scanner(file);
         Shape shape = new Shape();
@@ -22,10 +22,8 @@ public class MyApplication {
 
         shape.addLengths();
 
-        System.out.println(shape.getPoints());
-        System.out.println(shape.getDistances());
-
         System.out.println(shape.calculatePerimeter());
         System.out.println(shape.getLongestSide());
+        System.out.println(shape.getAvgSide());
     }
 }
