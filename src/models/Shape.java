@@ -13,11 +13,11 @@ public class Shape {
         points = new ArrayList<>();
     }
 
-    public void addPoint(Point point) {
+    public void addPoint(Point point) {  // This method adds a point to the points array.
         points.add(point);
     }
 
-    public void addLengths() {
+    public void addLengths() {  // This method adds the distances between each point to the array (The lengths of the polygon)
         int len = points.size();
         for (int i = 0; i < len - 1; i++) {
             distances.add(points.get(i).distance(points.get(i+1).getX(), points.get(i+1).getY()));
@@ -26,7 +26,7 @@ public class Shape {
     }
 
 
-    public double calculatePerimeter() {
+    public double calculatePerimeter() {  // This method returns the sum of all lengths
 
         for (int i = 0; i < distances.size(); i++) {
             perimeter += distances.get(i);
@@ -36,9 +36,9 @@ public class Shape {
 
     public double getAvgSide() {
         return perimeter / distances.size();
-    }
+    }  //  This method returns the average side of the polygon
 
-    public double getLongestSide() {
+    public double getLongestSide() {  // This method returns the longest side of the polygon
         double maxSide = distances.get(0);
         for (int i = 1; i < distances.size(); i++) {
             if (distances.get(i) > maxSide) maxSide = distances.get(i);
@@ -54,13 +54,4 @@ public class Shape {
         return distances;
     }
 
-    // container of Points (e.g. ArrayList<Point>)
-
-    // addPoint(Point) - adds to the container
-
-    // calculatePerimeter()
-
-    // getAverageSide()
-
-    // getLongestSide()
 }

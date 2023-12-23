@@ -10,9 +10,9 @@ public class MyApplication {
         File file = new File("C:\\Users\\Dos\\Assignment-1\\src\\mysource.txt");
 
         Scanner sc = new Scanner(file);
-        Shape shape = new Shape();
+        Shape shape = new Shape();  // Creates a Shape instance.
 
-        while (sc.hasNext()) {
+        while (sc.hasNext()) {  // Reads the file and adds each point coordinates until there are none.
             double x = sc.nextDouble();
             double y = sc.nextDouble();
 
