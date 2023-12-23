@@ -20,6 +20,8 @@ public class MyApplication {
             shape.addPoint(point);
         }
 
+        shape.addLengths();
+
         System.out.println(shape.calculatePerimeter());
         System.out.println(shape.getLongestSide());
     }

@@ -1,24 +1,25 @@
 package models;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Shape {
     private double perimeter = 0;
 
-    ArrayList points = new ArrayList<Point>;
+    private ArrayList<Point> points = new ArrayList<Point>();
 
+    private ArrayList<Double> distances = new ArrayList<Double>();
 
-    double distances[] = new double[points.size()];
-
-
-    public addPoint(Point) {
-        points.add(Point);
+    public Shape() {
+        points = new ArrayList<>();
     }
 
-    public addLengths {
+    public void addPoint(Point point) {
+        points.add(point);
+    }
+
+    public void addLengths() {
         for (int i = 0; i < points.size() - 1; i++) {
-            distances[i] = points[i].distance(points[i + 1].getX, points[i + 1].getY);
+            distances.add(points.get(i).distance(points.get(i+1).getX(), points.get(i+1).getY()));
         }
     }
 
@@ -26,7 +27,7 @@ public class Shape {
     public double calculatePerimeter() {
 
         for (int i = 0; i < distances.size(); i++) {
-            perimeter += distances[i];
+            perimeter += distances.get(i);
         }
         return perimeter;
     }
@@ -36,9 +37,9 @@ public class Shape {
     }
 
     public double getLongestSide() {
-        double maxSide = distances[0];
+        double maxSide = distances.get(0);
         for (int i = 1; i < distances.size(); i++) {
-            if (distances[i] > maxSide) maxSide = distances[i];
+            if (distances.get(i) > maxSide) maxSide = distances.get(i);
         }
         return maxSide;
     }

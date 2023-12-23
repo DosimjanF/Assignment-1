@@ -2,29 +2,27 @@ package models;
 import java.lang.Math;
 
 public class Point {
+
     private double x;
     private double y;
-    public void setX(double x) {
-        this.x = x;
+
+    public double distance(double x, double y) {
+        return Math.sqrt(Math.pow((x - getX()), 2)) +  Math.pow((y - getY()), 2);
     }
-    public void setY(double y) {
-        this.y = y;
-    }
-    public getX() {
-        return x
-    }
-    public getY() {
-        return y
+
+    public double getX() {
+        return x;
+    };
+    public double getY() {
+        return y;
     }
 
     public Point(double x, double y) {
-        setX(x)
-        setY(x)
+        this.x = x;
+        this.y = y;
     }
 
-    public double distance(double x, double y) {
-        return Math.sqrt(Math.pow((x - getX(), 2)) +  Math.pow((y - getY(), 2)))
-    }
+
 
     @Override
     public String toString() {
